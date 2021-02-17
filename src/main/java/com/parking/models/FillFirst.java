@@ -4,9 +4,9 @@ import com.parking.exception.ParkingLotGenericException;
 
 import java.util.List;
 
-public class FillFirst implements DispatchingStrategy {
-    private final static String ALL_PARKING_LOTS_ARE_FULL = "All Parking lots are full";
+import static com.parking.constant.Constants.ALL_PARKING_LOTS_ARE_FULL;
 
+public class FillFirst implements DispatchingStrategy {
     @Override
     public int dispatchCustomerTo(List<ParkingLot> parkingLots) {
 

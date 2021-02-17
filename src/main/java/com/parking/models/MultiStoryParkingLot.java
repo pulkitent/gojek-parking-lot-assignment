@@ -71,4 +71,12 @@ class SlotAndParkingNumberPair {
         this.slotNumber = slotNumber;
         this.parkingNumber = parkingNumber;
     }
+
+    public int getSlotNumber() {
+        return slotNumber;
+    }
+
+    public int getParkingNumber() {
+        return parkingNumber;
+    }
 }

@@ -31,4 +31,5 @@ public class Constants {
     public static final String SPACE_STRING = "       ";
     public static final String TWO_SPACES = "  ";
     public static final String BASE_PATH_OF_FILE = "src/main/resources/";
+    public static final String ALL_PARKING_LOTS_ARE_FULL = "All Parking lots are full";
 }

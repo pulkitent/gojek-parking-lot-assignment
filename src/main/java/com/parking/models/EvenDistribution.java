@@ -14,7 +14,7 @@ public class EvenDistribution implements DispatchingStrategy {
         for (ParkingLot parkingLot : parkingLots) {
             BigDecimal percentageOfEmptiness = parkingLot.getPercentageOfEmptiness();
 
-            if (percentageOfEmptiness.compareTo(maximumEmptyParkingSLots) == 1) {
+            if (percentageOfEmptiness.compareTo(maximumEmptyParkingSLots) >= 0) {
                 maximumEmptyParkingSLots = percentageOfEmptiness;
                 maximumEmptyParkingSlotId = index;
             }

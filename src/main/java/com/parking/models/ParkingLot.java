@@ -89,8 +89,9 @@ public class ParkingLot {
             }
         }
         throw new ParkingLotGenericException(CAR_DOESNT_EXIST);
-        //for new requirement
-        //return Integer.MIN_VALUE;
+
+        /* for new requirement
+        return Integer.MIN_VALUE; */
     }
 
     public List<Integer> getAllSlotNumbersWithGivenColor(String color) {
