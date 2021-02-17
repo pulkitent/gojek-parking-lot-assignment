@@ -2,10 +2,10 @@
 Gojek parking lot (code pairing or machine coding round) assignment
 
 # Getting started (Run the application)
-Go to root of project and run the following command
+Go to root of project and run the following commands
 
-/bin/sh ./setup.sh
-
+## input from console
+/bin/sh ./setup.sh & /bin/sh ./parking_lot.sh
 
 # Commands supported
 1. create_parking_lot <Size of parking spot>
