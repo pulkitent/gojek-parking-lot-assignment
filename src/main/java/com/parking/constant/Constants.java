@@ -30,4 +30,5 @@ public class Constants {
     public static final String COLOR_CAN_NOT_BE_EMPTY = "Color can not be empty";
     public static final String SPACE_STRING = "       ";
     public static final String TWO_SPACES = "  ";
+    public static final String BASE_PATH_OF_FILE = "src/main/resources/";
 }

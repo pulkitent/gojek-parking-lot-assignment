@@ -12,6 +12,10 @@ import static com.parking.io.output.ConsoleOutputUtility.print;
 import static com.parking.io.output.ConsoleOutputUtility.printInNextLine;
 
 public class CommonUtility {
+
+    private CommonUtility() {
+    }
+
     static void executeCommands() {
         Scanner scanner = new Scanner(System.in);
         String command = EMPTY_STRING;
