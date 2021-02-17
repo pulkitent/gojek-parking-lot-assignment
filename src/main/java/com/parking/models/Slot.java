@@ -2,7 +2,7 @@ package com.parking.models;
 
 import java.util.Objects;
 
-import static com.parking.constant.Constants.TWO_TABS;
+import static com.parking.constant.Constants.*;
 import static java.util.Objects.isNull;
 
 public class Slot {
@@ -32,7 +32,7 @@ public class Slot {
 
     @Override
     public String toString() {
-        return slotNumber + TWO_TABS + allottedCar;
+        return slotNumber + SPACE_STRING + ONE_TABS + TWO_SPACES + allottedCar;
     }
 
     public void assignCarToSlot(Car car) {

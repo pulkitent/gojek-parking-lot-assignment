@@ -16,7 +16,6 @@ Go to root of project and run the following command
 
 
 # Sample Input & Output for interactive mode
-
 input:
 
 create_parking_lot 6
@@ -32,8 +31,7 @@ park KA-01-P-333 White
 park DL-12-AA-9999 White
 registration_numbers_for_cars_with_colour White
 
-output:
-
+expected output:
 Created a parking lot with 6 slots
 Allocated slot number: 1
 Allocated slot number: 2
@@ -51,6 +49,7 @@ Slot No.        Registration No     Colour
 Allocated slot number: 4
 Sorry, parking lot is full
 KA-01-HH-1234, KA-01-HH-9999, KA-01-P-333
+
 
 # Things I tried to follow :
 1. Tried to create all the required domain entities/models as per problem statement
