@@ -26,6 +26,19 @@ public class Car {
         return registrationNumber + SPACE_STRING + color;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return registrationNumber.equals(car.registrationNumber) && color.equals(car.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(registrationNumber, color);
+    }
+
     void assignTicket(Ticket ticket) {
         driver.assignTicket(ticket);
     }
