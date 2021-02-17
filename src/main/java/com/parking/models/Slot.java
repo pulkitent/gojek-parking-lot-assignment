@@ -39,6 +39,10 @@ public class Slot {
         this.allottedCar = car;
     }
 
+    public void removeCarFromSlot() {
+        this.allottedCar = null;
+    }
+
     boolean isEmpty() {
         return isNull(this.allottedCar);
     }

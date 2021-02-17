@@ -29,6 +29,7 @@ public class ParkingLot {
 
         issueTicket(car, slotId);
         slot.assignCarToSlot(car);
+
         emptyParkingSlots.remove(slot);
         occupiedParkingSlots.add(slot);
 
@@ -40,20 +41,22 @@ public class ParkingLot {
             throw new ParkingLotGenericException(PARKING_SLOT_DOESNT_EXIST);
         }
 
-        Slot slotToBrRemoved = null;
+        Slot slotToBeRemoved = null;
 
         for (Slot slot : occupiedParkingSlots) {
             if (slot.hasGivenSlotId(slotId)) {
-                slotToBrRemoved = slot;
+                slotToBeRemoved = slot;
             }
         }
 
-        if (slotToBrRemoved.isEmpty()) {
+        if (slotToBeRemoved.isEmpty()) {
             throw new ParkingLotGenericException(PARKING_SLOT_WAS_ALREADY_EMPTY);
         }
 
-        occupiedParkingSlots.remove(slotToBrRemoved);
-        emptyParkingSlots.add(slotToBrRemoved);
+        slotToBeRemoved.removeCarFromSlot();
+        occupiedParkingSlots.remove(slotToBeRemoved);
+        emptyParkingSlots.add(slotToBeRemoved);
+
         emptyParkingSlots.sort(Comparator.comparingInt(Slot::getSlotNumber));
     }
 
@@ -113,3 +116,4 @@ public class ParkingLot {
         car.assignTicket(ticket);
     }
 }
+//TODO: emptyParkingSlots DS needs to be changed for optimization
