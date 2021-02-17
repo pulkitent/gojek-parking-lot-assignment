@@ -88,8 +88,9 @@ public class ParkingLot {
                 return occupiedParkingSlot.getSlotNumber();
             }
         }
-//        throw new ParkingLotGenericException(CAR_DOESNT_EXIST);
-        return Integer.MIN_VALUE;
+        throw new ParkingLotGenericException(CAR_DOESNT_EXIST);
+        //for new requirement
+        //return Integer.MIN_VALUE;
     }
 
     public List<Integer> getAllSlotNumbersWithGivenColor(String color) {
