@@ -2,6 +2,7 @@ package com.parking.models;
 
 import com.parking.exception.ParkingLotGenericException;
 
+import java.math.BigDecimal;
 import java.util.*;
 
 import static com.parking.constant.Constants.*;
@@ -87,7 +88,8 @@ public class ParkingLot {
                 return occupiedParkingSlot.getSlotNumber();
             }
         }
-        throw new ParkingLotGenericException(CAR_DOESNT_EXIST);
+//        throw new ParkingLotGenericException(CAR_DOESNT_EXIST);
+        return Integer.MIN_VALUE;
     }
 
     public List<Integer> getAllSlotNumbersWithGivenColor(String color) {
@@ -100,6 +102,26 @@ public class ParkingLot {
             }
         }
         return allSlotNumbersWithGivenColor;
+    }
+
+    boolean isParkingLotEmpty() {
+        return this.emptyParkingSlots.isEmpty();
+    }
+
+    int getNumberOfEmptySlots() {
+        return this.emptyParkingSlots.size();
+    }
+
+    BigDecimal getPercentageOfEmptiness() {
+        String sizeInString = String.valueOf(this.emptyParkingSlots.size());
+        String totalSizeInString = String.valueOf(this.size);
+
+        BigDecimal sizeInBigDecimal = new BigDecimal(sizeInString);
+        BigDecimal totalSizeInBigDecimal = new BigDecimal(totalSizeInString);
+        BigDecimal HUNDRED = new BigDecimal("100");
+
+        BigDecimal percentage = sizeInBigDecimal.divide(totalSizeInBigDecimal).multiply(HUNDRED);
+        return percentage;
     }
 
     private void allocateEmptySpots() {
